@@ -16,7 +16,7 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 @RequiredArgsConstructor
 public class SecurityConfig {
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception { // 기본 설정 해주기
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception { // 기본 설정 해준거 끄기.
         http
                 .cors().disable() // 타 도메인에서 API 호출 가능
                 .csrf().disable() // CSRF 토큰 끄기
